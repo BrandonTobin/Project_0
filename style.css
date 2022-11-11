@@ -7,27 +7,27 @@ body{
 
 .board{
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows:  100px 100px 100px;
+  grid-template-columns: 175px 175px 175px;
+  grid-template-rows: 175px 175px 175px;
   cursor: pointer;
 }
 
 .board .tile{
   color: black;
-  font-size: 2em;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .right-border{
-  border-right: 0.2em solid cyan
+  border-right: 10px solid cyan
 }
 
 .bottom-border{
-  border-bottom: 0.2em solid cyan
+  border-bottom: 10px solid cyan
 }
 
 h1{
-  color: violet;
+  color: black;
 }
