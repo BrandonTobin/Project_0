@@ -36,4 +36,23 @@ function tileClick(event) {
     boardState[tileNumber - 1] = Player_O
     turn = Player_X
   }
+  checkWinner()
 }
+
+function checkWinner() {
+  for (const winningCombos of winningCombos) {
+    const combo = winningCombos.combo
+    const strikeClass = winningCombos.strikeClass
+  }
+}
+
+const winningCombos = [
+  {combo: [1, 2, 3], strikeClass: "strike-row-1"}
+  {combo: [4, 5, 6], strikeClass: "strike-row-2"}
+  {combo: [7, 8, 9], strikeClass: "strike-row-3"}
+  {combo: [1, 4, 7], strikeClass: "strike-column-1"}
+  {combo: [2, 5, 8], strikeClass: "strike-column-2"}
+  {combo: [3, 6, 9], strikeClass: "strike-column-3"}
+  {combo: [1, 5, 9], strikeClass: "strike-diagonal-1"}
+  {combo: [3, 5, 7], strikeClass: "strike-diagonal-2"}
+]
