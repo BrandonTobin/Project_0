@@ -1,11 +1,3 @@
-// const divs = document.querySelectorAll('div')
-
-// document.addEventListener('click', (e) => {
-//   if (e.target.matches('div')) {
-//     console.log('hi')
-//   }
-// })
-
 const tiles = document.querySelectorAll('.tile')
 const Player_X = 'X'
 const Player_O = 'O'
@@ -54,24 +46,26 @@ function checkWinner() {
       tileValue1 != null &&
       tileValue1 === tileValue2 &&
       tileValue1 === tileValue3
-    )
+    ) {
       strike.classList.add(strikeClass)
-    gameOver(tileValue1)
-    return
+      gameOver(tileValue1)
+      return
+    }
   }
 
   const allTileFilledIn = boardState.every((tile) => tile !== null)
   if (allTileFilledIn) {
     gameOver(null)
   }
-}
-function gameOver(winnderText) {
-  let text = "Cat's game!"
-  if (winnerText != null) {
-    text = `Winner is ${winnerText}!`
+
+  function gameOver(winnerText) {
+    let text = "Cat's game!"
+    if (winnerText != null) {
+      text = `Winner is ${winnerText}!`
+    }
+    gameOverArea.className = 'visible'
+    gameOverText.innerHTML = 'text'
   }
-  gameOverArea.className = 'visible'
-  gameOverText.innerHTML = 'text'
 }
 
 function startNewGame() {
