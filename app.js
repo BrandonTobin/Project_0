@@ -64,7 +64,7 @@ function gameOver(winnerText) {
     text = `Winner is ${winnerText}!`
   }
   gameOverArea.className = 'visible'
-  gameOverText.innerHTML = 'text'
+  gameOverText.innerHTML = text
 }
 
 function startNewGame() {
