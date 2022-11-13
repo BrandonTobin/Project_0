@@ -5,7 +5,7 @@ body{
   background-color: rgb(168, 168, 238);
 }
 
-.board{
+#board{
   display: grid;
   grid-template-columns: 175px 175px 175px;
   grid-template-rows: 175px 175px 175px;
@@ -13,7 +13,7 @@ body{
   position: relative
 }
 
-.board .tile{
+.tile{
   color: black;
   font-size: 25px;
   display: flex;
@@ -92,6 +92,7 @@ h1{
 
 #game-over-area {
   text-align: center;
+  border: black 8px solid;
   padding: 50px;
   width: 50%;
   margin-top: 50px;
@@ -103,11 +104,11 @@ h2 {
   margin-top: 0px;
 }
 
-button {
-  background-color: transparent;
+.button {
+  background-color: black;
   color: magenta;
   padding: 10px;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .hidden {

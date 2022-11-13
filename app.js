@@ -35,9 +35,8 @@ function tileClick(event) {
 }
 
 function checkWinner() {
-  for (const winningCombos of winningCombos) {
-    const combo = winningCombos.combo
-    const strikeClass = winningCombos.strikeClass
+  for (const winningCombo of winningCombos) {
+    const { combo, strikeClass } = winningCombo
     const tileValue1 = boardState[combo[0] - 1]
     const tileValue2 = boardState[combo[1] - 1]
     const tileValue3 = boardState[combo[2] - 1]
@@ -57,15 +56,15 @@ function checkWinner() {
   if (allTileFilledIn) {
     gameOver(null)
   }
+}
 
-  function gameOver(winnerText) {
-    let text = "Cat's game!"
-    if (winnerText != null) {
-      text = `Winner is ${winnerText}!`
-    }
-    gameOverArea.className = 'visible'
-    gameOverText.innerHTML = 'text'
+function gameOver(winnerText) {
+  let text = "Cat's game!"
+  if (winnerText != null) {
+    text = `Winner is ${winnerText}!`
   }
+  gameOverArea.className = 'visible'
+  gameOverText.innerHTML = 'text'
 }
 
 function startNewGame() {
